@@ -1,0 +1,227 @@
+$background: #212f45;
+$orange: #fdac49;
+$yellow: #fcd422;
+$white: #fffafa;
+$gray: #a3a3a3;
+
+.snow-icon {
+	.cloud {
+		$cloudBorderRadiusLeft: 52% 48% 58% 42% / 43% 61% 39% 57%;
+		$cloudBorderRadiusMiddle: 44% 56% 49% 51% / 71% 63% 37% 29%;
+		$cloudBorderRadiusRight: 52% 48% 49% 51% / 43% 61% 39% 57%;
+		$cloudColorChange1: cloudColorChange 3s linear infinite;
+
+		@keyframes cloudColorChange {
+			0%,
+			100% {
+				background: $white;
+			}
+			50% {
+				background: $gray;
+			}
+		}
+
+		position: absolute;
+		width: 40%;
+		height: 40%;
+		top: 27.5%;
+		left: 30%;
+		background: $white;
+		border-radius: $cloudBorderRadiusMiddle;
+		animation: $cloudColorChange1;
+
+		@mixin sharedCloudSides {
+			content: '';
+			position: absolute;
+			width: 85%;
+			height: 85%;
+			top: 10%;
+			left: -50%;
+			right: -50%;
+			background: inherit;
+		}
+
+		&:before {
+			@include sharedCloudSides;
+			right: unset;
+			border-radius: $cloudBorderRadiusLeft;
+		}
+
+		&:after {
+			@include sharedCloudSides;
+			left: unset;
+			border-radius: $cloudBorderRadiusRight;
+		}
+
+		.cloud-copy {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: inherit;
+			border-radius: inherit;
+			z-index: 2;
+
+			&:before {
+				@include sharedCloudSides;
+				right: unset;
+				border-radius: $cloudBorderRadiusLeft;
+			}
+
+			&:after {
+				@include sharedCloudSides;
+				left: unset;
+				border-radius: $cloudBorderRadiusRight;
+			}
+		}
+
+		.snow {
+			position: absolute;
+			width: 140%;
+			height: 100%;
+			left: -20%;
+			top: 80%;
+			z-index: 1;
+			overflow: hidden;
+
+			.flake {
+				position: absolute;
+				width: 15%;
+				height: 20%;
+				top: -20%;
+			}
+
+			$firstSnow: snowFlakeFall 4s linear infinite;
+			$secondSnow: snowFlakeFall 4s 1s linear infinite;
+			$thirdSnow: snowFlakeFall 4s 2s linear infinite;
+			$fourthSnow: snowFlakeFall 4s 3s linear infinite;
+
+			@keyframes snowFlakeFall {
+				15% {
+					opacity: 1;
+				}
+				75% {
+					opacity: 0;
+				}
+				100% {
+					top: 120%;
+					opacity: 0;
+				}
+			}
+
+			@mixin sharedFlakePart {
+				position: absolute;
+				width: 8%;
+				height: 100%;
+				top: 0;
+				left: 46%;
+				background: $white;
+				border-radius: 10rem;
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 28%;
+					left: -100%;
+					top: 0;
+					background: inherit;
+					border-radius: inherit;
+					transform: rotate(-30deg);
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 28%;
+					right: -100%;
+					top: 0;
+					background: inherit;
+					border-radius: inherit;
+					transform: rotate(30deg);
+				}
+			}
+
+			.flake-part:nth-of-type(1) {
+				@include sharedFlakePart;
+			}
+
+			.flake-part:nth-of-type(2) {
+				@include sharedFlakePart;
+				transform: rotate(60deg);
+			}
+
+			.flake-part:nth-of-type(3) {
+				@include sharedFlakePart;
+				transform: rotate(120deg);
+			}
+
+			.flake-part:nth-of-type(4) {
+				@include sharedFlakePart;
+				transform: rotate(180deg);
+			}
+
+			.flake-part:nth-of-type(5) {
+				@include sharedFlakePart;
+				transform: rotate(240deg);
+			}
+
+			.flake-part:nth-of-type(6) {
+				@include sharedFlakePart;
+				transform: rotate(300deg);
+			}
+
+			.flake:nth-of-type(1) {
+				animation: $secondSnow;
+				left: 10%;
+			}
+
+			.flake:nth-of-type(2) {
+				animation: $firstSnow;
+				left: 28.5%;
+			}
+
+			.flake:nth-of-type(3) {
+				animation: $secondSnow;
+				left: 47%;
+			}
+
+			.flake:nth-of-type(4) {
+				animation: $firstSnow;
+				right: 28.5%;
+			}
+
+			.flake:nth-of-type(5) {
+				animation: $secondSnow;
+				right: 10%;
+			}
+
+			.flake:nth-of-type(6) {
+				animation: $thirdSnow;
+				left: 28.5%;
+			}
+
+			.flake:nth-of-type(7) {
+				animation: $thirdSnow;
+				right: 28.5%;
+			}
+
+			.flake:nth-of-type(8) {
+				animation: $fourthSnow;
+				left: 10%;
+			}
+
+			.flake:nth-of-type(9) {
+				animation: $fourthSnow;
+				left: 47%;
+			}
+
+			.flake:nth-of-type(10) {
+				animation: $fourthSnow;
+				right: 10%;
+			}
+		}
+	}
+}
