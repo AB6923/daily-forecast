@@ -1,4 +1,6 @@
 export * from './icons'
 export * from './Forcast'
 export * from './Form'
+export * from './Loading'
+export * from './Splash'
 export * from './WeatherIcon'

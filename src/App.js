@@ -1,19 +1,21 @@
 import React from 'react'
 import { WeatherContextProvider } from './contexts/WeatherContext'
-import { Forcast, Form } from './components'
+import { Forcast, Form, Loading, Splash } from './components'
 
 import 'normalize.css'
 import './sass/index.scss'
 
 export default function App() {
 	return (
-		<div className='container'>
-			<WeatherContextProvider>
+		<WeatherContextProvider>
+			<div className='container'>
 				<main>
+					<Splash />
+					<Loading />
 					<Forcast />
 				</main>
 				<Form />
-			</WeatherContextProvider>
-		</div>
+			</div>
+		</WeatherContextProvider>
 	)
 }
