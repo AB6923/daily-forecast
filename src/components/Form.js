@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { WeatherContext } from '../contexts/WeatherContext'
 
 export const Form = () => {
+	const { setLocation } = useContext(WeatherContext)
 	const [locationInput, setLocationInput] = useState('')
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		// alert(locationInput)
+		setLocation(locationInput)
 		setLocationInput('')
 	}
 
