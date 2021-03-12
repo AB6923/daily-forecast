@@ -11,40 +11,40 @@ import {
 	ThunderstormIcon,
 } from './icons'
 
-export const WeatherIcon = ({ iconReference }) => {
-	if (iconReference === '01d' || iconReference === '01n') {
+export const WeatherIcon = ({ iconRef }) => {
+	if (iconRef === '01d' || iconRef === '01n') {
 		return <SunnyIcon />
 	}
 
-	if (iconReference === '02d' || iconReference === '02n') {
+	if (iconRef === '02d' || iconRef === '02n') {
 		return <PartiallyCloudyIcon />
 	}
 
-	if (iconReference === '03d' || iconReference === '03n') {
+	if (iconRef === '03d' || iconRef === '03n') {
 		return <ScatteredCloudsIcon />
 	}
 
-	if (iconReference === '04d' || iconReference === '04n') {
+	if (iconRef === '04d' || iconRef === '04n') {
 		return <BrokenCloudsIcon />
 	}
 
-	if (iconReference === '09d' || iconReference === '09n') {
+	if (iconRef === '09d' || iconRef === '09n') {
 		return <RainShowersIcon />
 	}
 
-	if (iconReference === '10d' || iconReference === '10n') {
+	if (iconRef === '10d' || iconRef === '10n') {
 		return <RainIcon />
 	}
 
-	if (iconReference === '11d' || iconReference === '11n') {
+	if (iconRef === '11d' || iconRef === '11n') {
 		return <ThunderstormIcon />
 	}
 
-	if (iconReference === '13d' || iconReference === '13n') {
+	if (iconRef === '13d' || iconRef === '13n') {
 		return <SnowIcon />
 	}
 
-	if (iconReference === '50d' || iconReference === '50n') {
+	if (iconRef === '50d' || iconRef === '50n') {
 		return <MistIcon />
 	}
 
