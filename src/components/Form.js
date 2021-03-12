@@ -6,6 +6,7 @@ export const Form = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		// alert(locationInput)
+		setLocationInput('')
 	}
 
 	return (
