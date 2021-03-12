@@ -1,9 +1,14 @@
 import React from 'react'
+import { WeatherContextProvider } from './contexts/WeatherContext'
 import { Layout } from './components'
 
 import 'normalize.css'
 import './sass/index.scss'
 
 export default function App() {
-	return <Layout>main</Layout>
+	return (
+		<WeatherContextProvider>
+			<Layout>main</Layout>
+		</WeatherContextProvider>
+	)
 }
