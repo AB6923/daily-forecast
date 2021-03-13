@@ -5,7 +5,7 @@ export const CurrentWeather = ({ weatherData }) => {
 	console.log(weatherData)
 	return (
 		<article className='forcast-card'>
-			<WeatherIcon iconRef={weatherData.icon} />
+			<WeatherIcon iconRef={weatherData.currentIcon} />
 			<Temp temp={weatherData.currentTemp} country={weatherData.country} />
 		</article>
 	)
