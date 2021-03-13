@@ -1,16 +1,12 @@
-// import React, { useContext } from 'react'
-// import { WeatherContext } from '../contexts/WeatherContext'
-// import { WeatherIcon, Temp } from '../components'
+import React from 'react'
+import { WeatherIcon, Temp } from '../components'
 
-export const CurrentWeather = () => {
-	// const { weatherData } = useContext(WeatherContext)
-	// const icon = weatherData.current.weather[0].icon
-
+export const CurrentWeather = ({ weatherData }) => {
+	console.log(weatherData)
 	return (
-		<article className='current-weather'>
-			current weather
-			{/* <WeatherIcon iconRef={icon} />
-			<Temp temp={weatherData.current.temp} country={weatherData.country} /> */}
+		<article className='forcast-card'>
+			<WeatherIcon iconRef={weatherData.icon} />
+			<Temp temp={weatherData.currentTemp} country={weatherData.country} />
 		</article>
 	)
 }

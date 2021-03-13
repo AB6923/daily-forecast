@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { WeatherContext } from '../contexts/WeatherContext'
+import { toTitleCase } from '../utils/toTitleCase'
 
 export const Form = () => {
 	const { setLocation } = useContext(WeatherContext)
@@ -20,7 +21,7 @@ export const Form = () => {
 						type='text'
 						placeholder='New York'
 						value={locationInput}
-						onChange={(e) => setLocationInput(e.target.value)}
+						onChange={(e) => setLocationInput(toTitleCase(e.target.value))}
 						required
 					/>
 					<input type='submit' />

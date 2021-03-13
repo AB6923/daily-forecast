@@ -9,12 +9,14 @@ export default function App() {
 	return (
 		<WeatherContextProvider>
 			<div className='container'>
+				<header>header</header>
 				<main>
 					<Splash />
 					<Loading />
 					<Forcast />
 				</main>
 				<Form />
+				<footer>footer</footer>
 			</div>
 		</WeatherContextProvider>
 	)

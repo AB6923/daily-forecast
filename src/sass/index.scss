@@ -1,7 +1,54 @@
-@import './resets';
-@import './variables';
-@import './elements';
-@import './keyframes';
-@import './mixins';
+// color palette: https://coolors.co/212f45-fdac49-fcd422-fffafa
 
-@import './components/layout';
+@import './resets';
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$backgroundColor: #212f45;
+$textColor: #fffafa;
+$mainFont: 'Lato', sans-serif;
+
+$gray: #a3a3a3;
+$orange: #fdac49;
+$yellow: #fcd422;
+$white: #fffafa;
+
+body,
+html {
+	color: $textColor;
+	font-family: $mainFont;
+	background-color: $backgroundColor;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto auto;
+	background: $backgroundColor;
+}
+
+.container > main {
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+}
+
+header,
+main,
+aside,
+footer,
+.forcast-card {
+	padding: 1rem;
+}
+
+.weather-icon {
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+
+.forcast-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
