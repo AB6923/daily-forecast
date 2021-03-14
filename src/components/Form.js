@@ -3,13 +3,13 @@ import { WeatherContext } from '../contexts/WeatherContext'
 import { toTitleCase } from '../utils'
 
 export const Form = () => {
-	const { setLocation } = useContext(WeatherContext)
-	const [locationInput, setLocationInput] = useState('')
+	const { setLocationInput } = useContext(WeatherContext)
+	const [requestedLocation, setRequestedLocation] = useState('')
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		setLocation(locationInput)
-		setLocationInput('')
+		setLocationInput(requestedLocation)
+		setRequestedLocation('')
 	}
 
 	return (
@@ -20,8 +20,8 @@ export const Form = () => {
 					<input
 						type='text'
 						placeholder='New York'
-						value={locationInput}
-						onChange={(e) => setLocationInput(toTitleCase(e.target.value))}
+						value={requestedLocation}
+						onChange={(e) => setRequestedLocation(toTitleCase(e.target.value))}
 						required
 					/>
 					<input type='submit' />

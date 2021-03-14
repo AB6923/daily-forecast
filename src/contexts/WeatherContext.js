@@ -6,21 +6,22 @@ export const WeatherContext = createContext()
 export const WeatherContextProvider = ({ children }) => {
 	// const [units, setUnits] = useState()
 	const [isLoading, setIsLoading] = useState(false)
-	const [location, setLocation] = useState('')
+	const [locationInput, setLocationInput] = useState('')
 	const [weatherData, setWeatherData] = useState()
 	const [weatherAlerts, setWeatherAlerts] = useState()
 
 	useEffect(() => {
 		const getWeatherData = async () => {
-			if (!location) return
+			if (!locationInput) return
 			setIsLoading(true)
 
 			const apiKey = process.env.REACT_APP_API_KEY
-			const fetchBylocation = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`
+			const fetchBylocation = `https://api.openweathermap.org/data/2.5/weather?q=${locationInput}&appid=${apiKey}`
 
 			await fetch(fetchBylocation)
 				.then((res) => res.json())
 				.then((initialData) => {
+					const location = initialData.name
 					const lat = initialData.coord.lat
 					const lon = initialData.coord.lon
 					const country = initialData.sys.country
@@ -67,12 +68,12 @@ export const WeatherContextProvider = ({ children }) => {
 				.catch((err) => console.error(err))
 		}
 		getWeatherData()
-	}, [location])
+	}, [locationInput])
 
 	return (
 		<WeatherContext.Provider
 			value={{
-				setLocation,
+				setLocationInput,
 				isLoading,
 				weatherData,
 				weatherAlerts,
