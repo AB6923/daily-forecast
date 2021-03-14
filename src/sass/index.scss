@@ -1,44 +1,27 @@
-// color palette: https://coolors.co/212f45-fdac49-fcd422-fffafa
-
 @import './resets';
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import './variables';
+@import './elements';
 
-$backgroundColor: #212f45;
-$textColor: #fffafa;
-$mainFont: 'Lato', sans-serif;
-
-$gray: #a3a3a3;
-$orange: #fdac49;
-$yellow: #fcd422;
-$white: #fffafa;
-
-body,
-html {
-	color: $textColor;
-	font-family: $mainFont;
-	background-color: $backgroundColor;
+.page-header {
+	h1 {
+		font-size: 1.2rem;
+	}
 }
 
-.container {
-	width: 100%;
-	height: 100vh;
-	display: grid;
-	grid-template-rows: auto 1fr auto auto;
-	background: $backgroundColor;
+.section-header {
+	text-align: center;
+
+	h1 {
+		font-size: 3rem;
+		letter-spacing: 0.15rem;
+		padding: $spaceSm;
+	}
 }
 
-.container > main {
-	width: 100%;
-	height: 100%;
-	overflow: scroll;
-}
-
-header,
-main,
-aside,
-footer,
-.forcast-card {
-	padding: 1rem;
+small {
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
 }
 
 .weather-icon {
@@ -48,7 +31,9 @@ footer,
 }
 
 .forcast-card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	// display: grid;
+	border: 1px solid $white;
+	border-radius: 3px;
+	margin: $spaceMd 0;
+	padding: 0;
 }

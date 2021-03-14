@@ -4,10 +4,10 @@ import { getDayByLocation } from '../utils'
 export const WeatherContext = createContext()
 
 export const WeatherContextProvider = ({ children }) => {
+	// const [units, setUnits] = useState()
 	const [isLoading, setIsLoading] = useState(false)
 	const [location, setLocation] = useState('')
-	const [currentWeather, setCurrentWeather] = useState()
-	const [upcomingWeather, setUpcomingWeather] = useState()
+	const [weatherData, setWeatherData] = useState()
 	const [weatherAlerts, setWeatherAlerts] = useState()
 
 	useEffect(() => {
@@ -29,24 +29,23 @@ export const WeatherContextProvider = ({ children }) => {
 					fetch(fetchByLatLon)
 						.then((res) => res.json())
 						.then((data) => {
-							setWeatherAlerts(data.alerts)
-							setCurrentWeather({
-								location,
-								country,
-								day: getDayByLocation(data.timezone),
-								currentTemp: data.current.temp,
-								currentFeelsLike: data.current.feels_like,
-								currentDescription: data.current.weather[0].description,
-								currentIcon: data.current.weather[0].icon,
-								description: data.daily[0].weather[0].description,
-								icon: data.daily[0].weather[0].icon,
-								temp: data.daily[0].temp,
-								feelsLike: data.daily[0].feels_like,
-							})
+							const formattedData = [
+								{
+									location,
+									country,
+									day: getDayByLocation(data.timezone),
+									currentTemp: data.current.temp,
+									currentFeelsLike: data.current.feels_like,
+									currentDescription: data.current.weather[0].description,
+									currentIcon: data.current.weather[0].icon,
+									description: data.daily[0].weather[0].description,
+									icon: data.daily[0].weather[0].icon,
+									temp: data.daily[0].temp,
+									feelsLike: data.daily[0].feels_like,
+								},
+							]
 
 							const upcomingArray = data.daily.splice(1)
-							const upcoming = []
-
 							upcomingArray.forEach((day) => {
 								let weatherData = {
 									location,
@@ -56,10 +55,11 @@ export const WeatherContextProvider = ({ children }) => {
 									temp: day.temp,
 									feelsLike: day.feels_like,
 								}
-								upcoming.push(weatherData)
+								formattedData.push(weatherData)
 							})
 
-							setUpcomingWeather(upcoming)
+							setWeatherData(formattedData)
+							setWeatherAlerts(data.alerts)
 							setIsLoading(false)
 						})
 						.catch((err) => console.error(err))
@@ -74,8 +74,7 @@ export const WeatherContextProvider = ({ children }) => {
 			value={{
 				setLocation,
 				isLoading,
-				currentWeather,
-				upcomingWeather,
+				weatherData,
 				weatherAlerts,
 			}}>
 			{children}
