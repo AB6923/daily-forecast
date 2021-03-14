@@ -25,7 +25,7 @@ export const WeatherContextProvider = ({ children }) => {
 					const lat = initialData.coord.lat
 					const lon = initialData.coord.lon
 					const country = initialData.sys.country
-					const fetchByLatLon = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=$hourly,minutely&appid=${apiKey}`
+					const fetchByLatLon = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=$hourly,minutely&appid=${apiKey}`
 
 					fetch(fetchByLatLon)
 						.then((res) => res.json())
@@ -34,11 +34,13 @@ export const WeatherContextProvider = ({ children }) => {
 								{
 									location,
 									country,
-									day: getDayByLocation(data.timezone),
-									currentTemp: data.current.temp,
-									currentFeelsLike: data.current.feels_like,
-									currentDescription: data.current.weather[0].description,
-									currentIcon: data.current.weather[0].icon,
+									day: 'Current',
+									current: {
+										temp: data.current.temp,
+										feelsLike: data.current.feels_like,
+										description: data.current.weather[0].description,
+										icon: data.current.weather[0].icon,
+									},
 									description: data.daily[0].weather[0].description,
 									icon: data.daily[0].weather[0].icon,
 									temp: data.daily[0].temp,
@@ -47,17 +49,18 @@ export const WeatherContextProvider = ({ children }) => {
 							]
 
 							const upcomingArray = data.daily.splice(1)
-							upcomingArray.forEach((day) => {
+							for (let i = 0; i < upcomingArray.length; i++) {
 								let weatherData = {
 									location,
 									country,
-									description: day.weather[0].description,
-									icon: day.weather[0].icon,
-									temp: day.temp,
-									feelsLike: day.feels_like,
+									day: getDayByLocation(data.timezone, i + 1),
+									description: upcomingArray[i].weather[0].description,
+									icon: upcomingArray[i].weather[0].icon,
+									temp: upcomingArray[i].temp,
+									feelsLike: upcomingArray[i].feels_like,
 								}
 								formattedData.push(weatherData)
-							})
+							}
 
 							setWeatherData(formattedData)
 							setWeatherAlerts(data.alerts)

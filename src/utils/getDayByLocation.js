@@ -1,7 +1,10 @@
 const dayjs = require('dayjs')
 const utc = require('dayjs/plugin/utc')
 const timezone = require('dayjs/plugin/timezone')
-export const getDayByLocation = (timezoneRes) => {
+
+export const getDayByLocation = (timezoneRes, offset) => {
+	if (!offset) offset = 0
+
 	const weekdays = [
 		'Sunday',
 		'Monday',
@@ -11,11 +14,18 @@ export const getDayByLocation = (timezoneRes) => {
 		'Friday',
 		'Saturday',
 	]
-	const localDate = new Date()
+	const currentLocalDate = new Date()
+	const requestedLocalDate = new Date(
+		currentLocalDate.setDate(currentLocalDate.getDate() + offset)
+	)
+
 	dayjs.extend(utc)
 	dayjs.extend(timezone)
 
-	const requestedDate = dayjs(localDate).tz(timezoneRes).utc(true).toString()
+	const requestedDate = dayjs(requestedLocalDate)
+		.tz(timezoneRes)
+		.utc(true)
+		.toString()
 	const shortDayName = requestedDate.split(',')[0]
 	let longDayName = ''
 
