@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { WeatherContext } from '../contexts/WeatherContext'
-import { toTitleCase } from '../utils/toTitleCase'
+import { toTitleCase } from '../utils'
 
 export const Form = () => {
 	const { setLocation } = useContext(WeatherContext)

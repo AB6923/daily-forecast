@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react'
+import { getDayByLocation } from '../utils'
 
 export const WeatherContext = createContext()
 
@@ -32,6 +33,7 @@ export const WeatherContextProvider = ({ children }) => {
 							setCurrentWeather({
 								location,
 								country,
+								day: getDayByLocation(data.timezone),
 								currentTemp: data.current.temp,
 								currentFeelsLike: data.current.feels_like,
 								currentDescription: data.current.weather[0].description,

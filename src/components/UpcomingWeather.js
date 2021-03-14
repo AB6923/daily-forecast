@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { WeatherIcon } from './WeatherIcon'
 
 export const UpcomingWeather = ({ weatherData }) => {
