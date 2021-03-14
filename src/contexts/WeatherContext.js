@@ -4,7 +4,7 @@ import { getDayByLocation } from '../utils'
 export const WeatherContext = createContext()
 
 export const WeatherContextProvider = ({ children }) => {
-	// const [units, setUnits] = useState()
+	const [units, setUnits] = useState('locale-default')
 	const [isLoading, setIsLoading] = useState(false)
 	const [locationInput, setLocationInput] = useState('')
 	const [weatherData, setWeatherData] = useState()
@@ -80,6 +80,8 @@ export const WeatherContextProvider = ({ children }) => {
 				isLoading,
 				weatherData,
 				weatherAlerts,
+				units,
+				setUnits,
 			}}>
 			{children}
 		</WeatherContext.Provider>
