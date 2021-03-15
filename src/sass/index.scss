@@ -31,9 +31,10 @@ small {
 }
 
 .forcast-card {
-	// display: grid;
 	border: 1px solid $white;
 	border-radius: 3px;
 	margin: $spaceMd 0;
 	padding: 0;
+
+	min-height: 100px;
 }

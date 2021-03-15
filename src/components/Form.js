@@ -3,12 +3,12 @@ import { WeatherContext } from '../contexts/WeatherContext'
 import { toTitleCase } from '../utils'
 
 export const Form = () => {
-	const { setLocationInput } = useContext(WeatherContext)
+	const { getWeatherData } = useContext(WeatherContext)
 	const [requestedLocation, setRequestedLocation] = useState('')
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		setLocationInput(requestedLocation)
+		getWeatherData(requestedLocation)
 		setRequestedLocation('')
 	}
 

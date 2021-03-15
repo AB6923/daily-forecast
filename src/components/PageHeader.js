@@ -13,9 +13,9 @@ export const PageHeader = () => {
 					<input
 						type='radio'
 						name='units'
-						id='celsius'
+						id='metric'
 						onChange={(e) => setUnits(e.target.id)}
-						defaultChecked={units === 'celsius'}
+						checked={units === 'metric'}
 					/>
 				</label>
 				<label htmlFor='imperial'>
@@ -23,19 +23,9 @@ export const PageHeader = () => {
 					<input
 						type='radio'
 						name='units'
-						id='fahrenheit'
+						id='imperial'
 						onChange={(e) => setUnits(e.target.id)}
-						defaultChecked={units === 'fahrenheit'}
-					/>
-				</label>
-				<label htmlFor='locale-default'>
-					Locale Default
-					<input
-						type='radio'
-						name='units'
-						id='local-default'
-						onChange={(e) => setUnits(e.target.id)}
-						defaultChecked={units === 'locale-default'}
+						checked={units === 'imperial'}
 					/>
 				</label>
 			</form>

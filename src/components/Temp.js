@@ -1,19 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { WeatherContext } from '../contexts/WeatherContext'
 
-export const Temp = ({ temp, country }) => {
-	const toCelsius = (num) => {
-		return ((num - 32) * 5) / 9
+export const Temp = ({ temp }) => {
+	const { units } = useContext(WeatherContext)
+
+	const kelvinToCelsius = (num) => {
+		return Math.round(num - 273.15)
+	}
+	const kelvinToFahrenheit = (num) => {
+		return Math.round(num * 1.8 - 459.67)
 	}
 
-	const isImperial = country === 'US'
-	const formattedTemp = isImperial
-		? Math.round(temp)
-		: Math.round(toCelsius(temp))
+	if (units === 'metric') {
+		return (
+			<>
+				{kelvinToCelsius(temp)}
+				<span className='degrees'>°C</span>
+			</>
+		)
+	}
 
-	return (
-		<p className='temp'>
-			{formattedTemp}
-			<span className='degrees'>{isImperial ? '°F' : '°C'}</span>
-		</p>
-	)
+	if (units === 'imperial') {
+		return (
+			<>
+				{kelvinToFahrenheit(temp)}
+				<span className='degrees'>°F</span>
+			</>
+		)
+	}
 }
