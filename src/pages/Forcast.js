@@ -4,7 +4,7 @@ import { ForcastCard } from '../components'
 
 export const Forcast = () => {
 	const { weatherData, isLoading } = useContext(WeatherContext)
-	weatherData && console.log(weatherData[1])
+	weatherData && console.log(weatherData)
 	return weatherData && !isLoading ? (
 		<section className='forcast'>
 			<header className='section-header'>

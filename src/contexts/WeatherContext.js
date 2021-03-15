@@ -44,6 +44,9 @@ export const WeatherContextProvider = ({ children }) => {
 									description: data.current.weather[0].description,
 									icon: data.current.weather[0].icon,
 								},
+							},
+							{
+								day: 'Today',
 								description: data.daily[0].weather[0].description,
 								icon: data.daily[0].weather[0].icon,
 								temp: data.daily[0].temp,
@@ -54,7 +57,6 @@ export const WeatherContextProvider = ({ children }) => {
 						const upcomingArray = data.daily.splice(1)
 						for (let i = 0; i < upcomingArray.length; i++) {
 							let weatherData = {
-								location,
 								day: getDayByLocation(data.timezone, i + 1),
 								description: upcomingArray[i].weather[0].description,
 								icon: upcomingArray[i].weather[0].icon,
