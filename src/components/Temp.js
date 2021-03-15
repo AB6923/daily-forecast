@@ -13,19 +13,19 @@ export const Temp = ({ temp }) => {
 
 	if (units === 'metric') {
 		return (
-			<>
+			<span className='temp'>
 				{kelvinToCelsius(temp)}
 				<span className='degrees'>°C</span>
-			</>
+			</span>
 		)
 	}
 
 	if (units === 'imperial') {
 		return (
-			<>
+			<span className='temp'>
 				{kelvinToFahrenheit(temp)}
 				<span className='degrees'>°F</span>
-			</>
+			</span>
 		)
 	}
 }

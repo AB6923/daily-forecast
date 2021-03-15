@@ -2,35 +2,5 @@
 @import './variables';
 @import './elements';
 
+@import './components/forcastCard';
 @import './components/pageHeader';
-
-.section-header {
-	text-align: center;
-
-	h1 {
-		font-size: 3rem;
-		letter-spacing: 0.15rem;
-		padding: $spaceSm;
-	}
-}
-
-small {
-	font-size: 0.7rem;
-	text-transform: uppercase;
-	letter-spacing: 0.15rem;
-}
-
-.weather-icon {
-	position: relative;
-	width: 300px;
-	height: 300px;
-}
-
-.forcast-card {
-	border: 1px solid $white;
-	border-radius: 3px;
-	margin: $spaceMd 0;
-	padding: 0;
-
-	min-height: 100px;
-}
