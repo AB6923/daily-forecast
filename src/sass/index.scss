@@ -2,11 +2,7 @@
 @import './variables';
 @import './elements';
 
-.page-header {
-	h1 {
-		font-size: 1.2rem;
-	}
-}
+@import './components/pageHeader';
 
 .section-header {
 	text-align: center;
