@@ -1,25 +1,33 @@
 .location-form {
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
 	label {
-		display: flex;
-		align-items: center;
+		margin: $spaceSm;
 		font-size: 1.2rem;
+		display: block;
+		text-align: center;
+		line-height: 1.25em;
+		margin: $spaceMd;
 	}
 
-	input[type='text'] {
-		margin-left: $spaceSm;
-		background: none;
+	input {
+		padding: $spaceXsm $spaceSm;
 		border: none;
-		border-bottom: 1px solid $white;
-		color: $white;
-		width: 50%;
+		border-radius: $borderRadiusSm;
+		margin: $spaceXsm;
+		width: 60%;
 
 		&:focus {
 			outline: none;
 		}
+	}
 
-		&::placeholder {
-			color: $white;
-			opacity: 0.3;
-		}
+	input[type='submit'] {
+		background: seagreen;
+		color: $white;
 	}
 }

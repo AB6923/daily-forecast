@@ -14,17 +14,18 @@ export const LocationForm = () => {
 
 	return (
 		<form className='location-form' onSubmit={handleSubmit}>
-			<label>
-				Get forcast for
-				<input
-					type='text'
-					placeholder='New York'
-					value={requestedLocation}
-					onChange={(e) => setRequestedLocation(toTitleCase(e.target.value))}
-					required
-				/>
-				<input type='submit' value='>' />
+			<label htmlFor='location'>
+				Enter a location to get the current and upcoming weather forcast
 			</label>
+			<input
+				type='text'
+				placeholder='New York'
+				name='location'
+				value={requestedLocation}
+				onChange={(e) => setRequestedLocation(toTitleCase(e.target.value))}
+				required
+			/>
+			<input type='submit' value='Get Forcast' />
 		</form>
 	)
 }
