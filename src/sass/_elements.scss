@@ -7,16 +7,15 @@ html {
 
 .container {
 	width: 100%;
-	height: 100vh;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	background: $backgroundColor;
 }
 
 main {
-	width: 100%;
-	height: 100%;
-	overflow: scroll;
+	flex-grow: 1;
 }
 
 header,
@@ -24,9 +23,6 @@ main,
 aside,
 footer {
 	padding: $spaceSm $spaceMd;
-}
-aside {
-	padding: $spaceLg;
 }
 
 small,
@@ -53,4 +49,9 @@ h3 {
 	padding: 0.5rem 0;
 	text-decoration: underline;
 	color: $orange;
+}
+
+footer {
+	width: 100%;
+	text-align: center;
 }

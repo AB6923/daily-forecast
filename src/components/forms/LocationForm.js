@@ -15,7 +15,7 @@ export const LocationForm = () => {
 	return (
 		<form className='location-form' onSubmit={handleSubmit}>
 			<label>
-				Get Forcast for
+				Get forcast for
 				<input
 					type='text'
 					placeholder='New York'

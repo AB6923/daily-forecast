@@ -11,6 +11,7 @@ export const Forcast = () => {
 				<small>The weather in</small>
 				<h1>{weatherData[0].location}</h1>
 			</header>
+
 			<div className='forcast-cards'>
 				{weatherData.map((forcast, i) => (
 					<ForcastCard weatherData={forcast} key={i} />
