@@ -1,7 +1,7 @@
 import React from 'react'
 import { WeatherContextProvider } from './contexts/WeatherContext'
 import { Forcast, Loading, Splash } from './pages'
-import { Header, Footer } from './components'
+import { Header } from './components'
 
 import 'normalize.css'
 import './sass/index.scss'
@@ -16,7 +16,12 @@ export default function App() {
 					<Loading />
 					<Forcast />
 				</main>
-				<Footer />
+				<footer>
+					by{' '}
+					<a href='https://aexcode.com' target='_blank'>
+						aexcode
+					</a>
+				</footer>
 			</div>
 		</WeatherContextProvider>
 	)

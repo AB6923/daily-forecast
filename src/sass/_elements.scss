@@ -56,5 +56,11 @@ h3 {
 
 footer {
 	width: 100%;
-	text-align: center;
+	text-align: right;
+	font-size: 0.8rem;
+	letter-spacing: 0.05rem;
+
+	a {
+		color: $white;
+	}
 }
