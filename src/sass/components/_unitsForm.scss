@@ -1,0 +1,12 @@
+.units-form {
+	label {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: $spaceSm;
+
+		input {
+			margin: 0 0 0 $spaceSm;
+		}
+	}
+}

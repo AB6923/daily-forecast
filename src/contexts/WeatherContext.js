@@ -80,6 +80,7 @@ export const WeatherContextProvider = ({ children }) => {
 			value={{
 				isLoading,
 				weatherData,
+				setWeatherData,
 				weatherAlerts,
 				units,
 				setUnits,
