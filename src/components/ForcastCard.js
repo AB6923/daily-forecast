@@ -12,10 +12,15 @@ export const ForcastCard = ({ weatherData }) => {
 			{/* current forcast ========== */}
 			<section className='current-forcast'>
 				<WeatherIcon iconRef={current.icon} />
-				<p>
-					Current temp: <Temp temp={current.temp} />
-				</p>
-				<p>{toTitleCase(current.description)}</p>
+				<div className='details'>
+					<p className='current-temp'>
+						<Temp temp={current.temp} />
+					</p>
+					<p className='small'>{toTitleCase(current.description)}</p>
+					<p className='small'>
+						Feels like: <Temp temp={current.feelsLike} />
+					</p>
+				</div>
 			</section>
 		</article>
 	) : (
@@ -25,45 +30,50 @@ export const ForcastCard = ({ weatherData }) => {
 				{/* averages ========== */}
 				<section className='forcast-averages'>
 					<WeatherIcon iconRef={icon} />
-					<p>{toTitleCase(description)}</p>
-					<p>
-						Min: <Temp temp={temp.min} />
-					</p>
-					<p>
-						Max: <Temp temp={temp.max} />
-					</p>
+					<div className='details'>
+						<h3>Averages</h3>
+						<p className='small'>{toTitleCase(description)}</p>
+						<p className='small'>
+							Min: <Temp temp={temp.min} />
+						</p>
+						<p className='small'>
+							Max: <Temp temp={temp.max} />
+						</p>
+					</div>
 				</section>
-				{/* quarterly ========== */}
-				<section className='forcast-quarterly'>
-					<h2>Quarterly</h2>
-					<p>
-						Morn: <Temp temp={temp.morn} />
-					</p>
-					<p>
-						Day: <Temp temp={temp.day} />
-					</p>
-					<p>
-						Eve: <Temp temp={temp.eve} />
-					</p>
-					<p>
-						Night: <Temp temp={temp.night} />
-					</p>
-				</section>
-				{/* feels like ========== */}
-				<section className='forcast-feels-like'>
-					<h2>Feels Like</h2>
-					<p>
-						Morn: <Temp temp={feelsLike.morn} />
-					</p>
-					<p>
-						Day: <Temp temp={feelsLike.day} />
-					</p>
-					<p>
-						Eve: <Temp temp={feelsLike.eve} />
-					</p>
-					<p>
-						Night: <Temp temp={feelsLike.night} />
-					</p>
+				<section className='forcast-details'>
+					{/* quarterly ========== */}
+					<section className='forcast-quarterly'>
+						<h3>Quarterly</h3>
+						<p className='small'>
+							Morn: <Temp temp={temp.morn} />
+						</p>
+						<p className='small'>
+							Day: <Temp temp={temp.day} />
+						</p>
+						<p className='small'>
+							Eve: <Temp temp={temp.eve} />
+						</p>
+						<p className='small'>
+							Night: <Temp temp={temp.night} />
+						</p>
+					</section>
+					{/* feels like ========== */}
+					<section className='forcast-feels-like'>
+						<h3>Feels Like</h3>
+						<p className='small'>
+							Morn: <Temp temp={feelsLike.morn} />
+						</p>
+						<p className='small'>
+							Day: <Temp temp={feelsLike.day} />
+						</p>
+						<p className='small'>
+							Eve: <Temp temp={feelsLike.eve} />
+						</p>
+						<p className='small'>
+							Night: <Temp temp={feelsLike.night} />
+						</p>
+					</section>
 				</section>
 			</section>
 		</article>

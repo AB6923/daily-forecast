@@ -28,9 +28,10 @@ footer {
 
 small,
 .small {
-	font-size: 0.7rem;
 	text-transform: uppercase;
-	letter-spacing: 0.15rem;
+	font-size: 0.9rem;
+	letter-spacing: 0.1em;
+	padding: 0.25rem;
 }
 
 .section-header {
@@ -42,4 +43,11 @@ small,
 		letter-spacing: 0.15rem;
 		padding: $spaceSm;
 	}
+}
+
+h3 {
+	font-size: 1.5rem;
+	padding: 0.5rem 0;
+	text-decoration: underline;
+	color: $orange;
 }

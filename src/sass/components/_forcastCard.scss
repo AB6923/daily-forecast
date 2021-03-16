@@ -1,9 +1,10 @@
 .forcast-card {
-	margin: $spaceMd 0;
-
+	margin: $spaceMd auto;
 	border: 1px solid $orange;
 	border-radius: 3px;
-	min-height: 200px;
+	width: 100%;
+	max-width: 400px;
+	padding-bottom: $spaceMd;
 }
 
 .forcast-card > * {
@@ -32,11 +33,23 @@
 
 .degrees {
 	position: absolute;
+	top: 0.2em;
 	font-size: 0.5em;
 }
 
-// current forcast ==========
-.current-forcast {
-	border-bottom: 1px solid $orange;
-	padding-bottom: $spaceSm;
+.current-forcast,
+.forcast-averages,
+.forcast-details {
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	place-items: center;
+
+	.details {
+		padding: $spaceMd;
+	}
+}
+
+.current-temp {
+	font-size: 3rem;
 }
