@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { WeatherContext } from '../../contexts/WeatherContext'
-
 export const UnitsForm = () => {
 	const { units, setUnits } = useContext(WeatherContext)
 
