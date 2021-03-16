@@ -19,6 +19,16 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	margin: auto;
+
+	@media ($bpMamaBear) {
+		max-width: 900px;
+	}
+
+	@media ($bpPapaBear) {
+		max-width: 1800px;
+	}
 }
 
 header,
@@ -31,9 +41,9 @@ footer {
 small,
 .small {
 	text-transform: uppercase;
-	font-size: 0.9rem;
+	font-size: $fontSm;
 	letter-spacing: 0.1em;
-	padding: 0.25rem;
+	padding: $spaceXsm;
 }
 
 .section-header {

@@ -18,7 +18,7 @@ export default function App() {
 				</main>
 				<footer>
 					by{' '}
-					<a href='https://aexcode.com' target='_blank'>
+					<a href='https://aexcode.com' target='_blank' rel='noreferrer'>
 						aexcode
 					</a>
 				</footer>

@@ -1,5 +1,6 @@
 export * from './forms'
 export * from './icons'
+export * from './CurrentForcastCard'
 export * from './ForcastCard'
 export * from './Header'
 export * from './Temp'

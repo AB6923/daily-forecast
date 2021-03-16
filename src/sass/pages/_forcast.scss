@@ -1,2 +1,8 @@
 .forcast {
+	width: 100%;
+
+	.forcast-cards {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }

@@ -30,5 +30,19 @@
 	input[type='submit'] {
 		background: seagreen;
 		color: $white;
+		width: 50%;
+	}
+
+	@media ($bpBabyBear) {
+		width: 400px;
+
+		label {
+			font-size: 1.5rem;
+		}
+
+		input {
+			font-size: 1.25rem;
+			margin: $spaceSm;
+		}
 	}
 }
