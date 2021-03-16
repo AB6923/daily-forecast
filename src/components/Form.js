@@ -14,9 +14,9 @@ export const Form = () => {
 
 	return (
 		<aside>
-			<form onSubmit={handleSubmit}>
+			<form className='location-form' onSubmit={handleSubmit}>
 				<label>
-					Get forcast for
+					Get Forcast for
 					<input
 						type='text'
 						placeholder='New York'
@@ -24,7 +24,7 @@ export const Form = () => {
 						onChange={(e) => setRequestedLocation(toTitleCase(e.target.value))}
 						required
 					/>
-					<input type='submit' />
+					<input type='submit' value='>' />
 				</label>
 			</form>
 		</aside>

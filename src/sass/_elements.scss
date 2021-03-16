@@ -9,7 +9,7 @@ html {
 	width: 100%;
 	height: 100vh;
 	display: grid;
-	grid-template-rows: auto 1fr auto auto;
+	grid-template-rows: auto 1fr auto;
 	background: $backgroundColor;
 }
 
@@ -24,6 +24,9 @@ main,
 aside,
 footer {
 	padding: $spaceSm $spaceMd;
+}
+aside {
+	padding: $spaceLg;
 }
 
 small,
