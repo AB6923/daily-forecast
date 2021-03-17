@@ -32,7 +32,7 @@ Daily forcast is a basic weather app that allows a user to get the current and u
 <div align='center'>
   <img src='https://i.imgur.com/xKPJfY0.png' alt='weather forcast for boston' />
   <img src='https://i.imgur.com/S7wEk7F.png' alt='weather forcast for boston' />
-  View all the <a href='https://imgur.com/a/k73o0gy' target='_blank'>App Screenshots</a> on Imgur
+  <p>View all the <a href='https://imgur.com/a/k73o0gy' target='_blank'>App Screenshots</a> on Imgur</p>
 </div>
 <br />
 
@@ -45,5 +45,5 @@ However, this app is just for fun! It's a mash of the material I'm currently lea
 
 <div align='center'>
   <img src='https://i.imgur.com/oIOMLwr.gif' alt='weather icon showcase gif' />
-  View My <a href='https://codepen.io/collection/DKjzqY' target='_blank'>Pure CSS Weather Icon Collection</a> on Codepen
+  <p>View My <a href='https://codepen.io/collection/DKjzqY' target='_blank'>Pure CSS Weather Icon Collection</a> on Codepen</p>
 </div>
