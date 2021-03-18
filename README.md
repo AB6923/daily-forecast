@@ -5,7 +5,7 @@
 **Author:** [aexcode](https://aexcode.com)
 
 <div align='center'>
-  <img src='https://i.imgur.com/r0BgC1z.png' alt='daily forecast landng page' />
+  <img src='https://i.imgur.com/zr7ZXII.png' alt='daily forecast landng page' />
 </div>
 
 ## Description:
