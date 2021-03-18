@@ -34,7 +34,9 @@ Daily forecast is a basic weather app that allows a user to get the current and 
   <img src='https://i.imgur.com/S7wEk7F.png' alt='weather forecast for boston' />
   <p>View all the <a href='https://imgur.com/a/k73o0gy' target='_blank'>App Screenshots</a> on Imgur</p>
 </div>
-<br />
+
+## Future Updates:
+- Additional error handling for invalid locations
 
 ## About the Weather Icons:
 
