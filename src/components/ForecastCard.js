@@ -3,15 +3,15 @@ import { toTitleCase } from '../utils'
 import { WeatherIcon } from '../components'
 import { Temp } from './Temp'
 
-export const ForcastCard = ({ weatherData }) => {
+export const ForecastCard = ({ weatherData }) => {
 	const { day, description, feelsLike, icon, temp } = weatherData
 
 	return !weatherData.current ? (
-		<article className='forcast-card'>
-			<h2 className='forcast-day small'>{day}</h2>
-			<section className='upcoming-forcast'>
+		<article className='forecast-card'>
+			<h2 className='forecast-day small'>{day}</h2>
+			<section className='upcoming-forecast'>
 				{/* averages ========== */}
-				<section className='forcast-averages'>
+				<section className='forecast-averages'>
 					<WeatherIcon iconRef={icon} />
 					<div className='details'>
 						<h3>Averages</h3>
@@ -24,9 +24,9 @@ export const ForcastCard = ({ weatherData }) => {
 						</p>
 					</div>
 				</section>
-				<section className='forcast-details'>
+				<section className='forecast-details'>
 					{/* quarterly ========== */}
-					<section className='forcast-quarterly'>
+					<section className='forecast-quarterly'>
 						<h3>Quarterly</h3>
 						<p className='small'>
 							Morn: <Temp temp={temp.morn} />
@@ -42,7 +42,7 @@ export const ForcastCard = ({ weatherData }) => {
 						</p>
 					</section>
 					{/* feels like ========== */}
-					<section className='forcast-feels-like'>
+					<section className='forecast-feels-like'>
 						<h3>Feels Like</h3>
 						<p className='small'>
 							Morn: <Temp temp={feelsLike.morn} />

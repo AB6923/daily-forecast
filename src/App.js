@@ -1,6 +1,6 @@
 import React from 'react'
 import { WeatherContextProvider } from './contexts/WeatherContext'
-import { Forcast, Loading, Splash } from './pages'
+import { Forecast, Loading, Splash } from './pages'
 import { Header } from './components'
 
 import 'normalize.css'
@@ -14,7 +14,7 @@ export default function App() {
 				<main>
 					<Splash />
 					<Loading />
-					<Forcast />
+					<Forecast />
 				</main>
 				<footer>
 					by{' '}

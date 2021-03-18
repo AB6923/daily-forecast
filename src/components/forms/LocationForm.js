@@ -15,7 +15,7 @@ export const LocationForm = () => {
 	return (
 		<form className='location-form' onSubmit={handleSubmit}>
 			<label htmlFor='location'>
-				Enter a location to get the current and upcoming weather forcast
+				Enter a location to get the current and upcoming weather forecast
 			</label>
 			<input
 				type='text'
@@ -25,7 +25,7 @@ export const LocationForm = () => {
 				onChange={(e) => setRequestedLocation(toTitleCase(e.target.value))}
 				required
 			/>
-			<input type='submit' value='Get Forcast' />
+			<input type='submit' value='Get Forecast' />
 		</form>
 	)
 }

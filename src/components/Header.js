@@ -10,7 +10,7 @@ export const Header = () => {
 
 	return (
 		<header className='page-header'>
-			<h1 onClick={() => setWeatherData()}>Daily Forcast</h1>
+			<h1 onClick={() => setWeatherData()}>Daily Forecast</h1>
 
 			{settingsOpen && (
 				<div className='units-form-group'>

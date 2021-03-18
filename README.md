@@ -1,16 +1,16 @@
-# Daily Forcast
+# Daily Forecast
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9e014a15-8366-4d44-9da8-437dc079eb0b/deploy-status)](https://app.netlify.com/sites/aexcode-daily-forcast/deploys) \
-**Website:** [aexcode-daily-forcast.netlify.app](https://aexcode-daily-forcast.netlify.app) \
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9e014a15-8366-4d44-9da8-437dc079eb0b/deploy-status)](https://app.netlify.com/sites/aexcode-daily-forecast/deploys) \
+**Website:** [aexcode-daily-forecast.netlify.app](https://aexcode-daily-forecast.netlify.app) \
 **Author:** [aexcode](https://aexcode.com)
 
 <div align='center'>
-  <img src='https://i.imgur.com/r0BgC1z.png' alt='daily forcast landng page' />
+  <img src='https://i.imgur.com/r0BgC1z.png' alt='daily forecast landng page' />
 </div>
 
 ## Description:
 
-Daily forcast is a basic weather app that allows a user to get the current and upcoming forcast for any location in the world. The app features a set of hand-crafted, pure CSS weather icons that have been mapped to the OpenWeatherMap API as well as an option to switch from Celsius to Fahrenheit or vice versa, on the fly.
+Daily forecast is a basic weather app that allows a user to get the current and upcoming forecast for any location in the world. The app features a set of hand-crafted, pure CSS weather icons that have been mapped to the OpenWeatherMap API as well as an option to switch from Celsius to Fahrenheit or vice versa, on the fly.
 
 ## Tech:
 
@@ -23,15 +23,15 @@ Daily forcast is a basic weather app that allows a user to get the current and u
 
 ## Features:
 
-- Users can search by location to get the current and upcoming weather forcast in that region.
+- Users can search by location to get the current and upcoming weather forecast in that region.
 - Users can switch between Celsius and Fahrenheit and see the change in real time
 - If temperature units preference has not been set, the location of the first search will determine the units displayed. Locations in the USA will default to Fahrenheit, units outside the USA will default to Celsius.
 - Once units have been set ether by the user or the first searched location, they will persist until changed by the user.
-- Mobile Responsive. [Check it out on Responsinator](https://www.responsinator.com/?url=https%3A%2F%2Faexcode-daily-forcast.netlify.app)
+- Mobile Responsive. [Check it out on Responsinator](https://www.responsinator.com/?url=https%3A%2F%2Faexcode-daily-forecast.netlify.app)
 <br /><br />
 <div align='center'>
-  <img src='https://i.imgur.com/xKPJfY0.png' alt='weather forcast for boston' />
-  <img src='https://i.imgur.com/S7wEk7F.png' alt='weather forcast for boston' />
+  <img src='https://i.imgur.com/xKPJfY0.png' alt='weather forecast for boston' />
+  <img src='https://i.imgur.com/S7wEk7F.png' alt='weather forecast for boston' />
   <p>View all the <a href='https://imgur.com/a/k73o0gy' target='_blank'>App Screenshots</a> on Imgur</p>
 </div>
 <br />

@@ -1,4 +1,4 @@
-.forcast-card {
+.forecast-card {
 	margin: $spaceMd auto;
 	border: 1px solid $orange;
 	border-radius: 3px;
@@ -7,11 +7,11 @@
 	padding-bottom: $spaceMd;
 }
 
-.forcast-card > * {
+.forecast-card > * {
 	padding: $spaceSm;
 }
 
-.forcast-day {
+.forecast-day {
 	display: inline-block;
 	padding: $spaceSm;
 	background: $orange;
@@ -37,9 +37,9 @@
 	font-size: 0.5em;
 }
 
-.current-forcast,
-.forcast-averages,
-.forcast-details {
+.current-forecast,
+.forecast-averages,
+.forecast-details {
 	margin: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;

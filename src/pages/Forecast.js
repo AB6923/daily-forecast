@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { WeatherContext } from '../contexts/WeatherContext'
-import { CurrentForcastCard, ForcastCard } from '../components'
+import { CurrentForecastCard, ForecastCard } from '../components'
 
-export const Forcast = () => {
+export const Forecast = () => {
 	const { weatherData, isLoading } = useContext(WeatherContext)
 	return weatherData && !isLoading ? (
 		<section className='forcast'>
@@ -10,11 +10,11 @@ export const Forcast = () => {
 				<small>The weather in</small>
 				<h1>{weatherData[0].location}</h1>
 			</header>
-			<CurrentForcastCard weatherData={weatherData[0]} />
+			<CurrentForecastCard weatherData={weatherData[0]} />
 
 			<div className='forcast-cards'>
 				{weatherData.map((forcast, i) => (
-					<ForcastCard weatherData={forcast} key={i} />
+					<ForecastCard weatherData={forcast} key={i} />
 				))}
 			</div>
 		</section>

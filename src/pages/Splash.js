@@ -7,7 +7,7 @@ export const Splash = () => {
 	return !isLoading && !weatherData ? (
 		<section className='splash'>
 			<WeatherIcon iconRef='01d' />
-			<h1>Daily Forcast</h1>
+			<h1>Daily Forecast</h1>
 			<LocationForm />
 		</section>
 	) : null

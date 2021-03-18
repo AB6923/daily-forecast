@@ -3,14 +3,14 @@ import { toTitleCase } from '../utils'
 import { WeatherIcon } from '../components'
 import { Temp } from './Temp'
 
-export const CurrentForcastCard = ({ weatherData }) => {
+export const CurrentForecastCard = ({ weatherData }) => {
 	const { current, day } = weatherData
 
 	return weatherData.current ? (
-		<article className='forcast-card'>
-			<h2 className='forcast-day small'>{day}</h2>
-			{/* current forcast ========== */}
-			<section className='current-forcast'>
+		<article className='forecast-card'>
+			<h2 className='forecast-day small'>{day}</h2>
+			{/* current forecast ========== */}
+			<section className='current-forecast'>
 				<WeatherIcon iconRef={current.icon} />
 				<div className='details'>
 					<p className='current-temp'>
